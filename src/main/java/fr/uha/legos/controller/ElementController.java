@@ -5,10 +5,7 @@ import fr.uha.legos.repository.CollectionRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.context.Theme;
-import org.springframework.web.bind.annotation.PatchMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
@@ -30,6 +27,20 @@ public class ElementController {
             collection.getSets().add(element);
             collectionRepository.save(collection);
             return ResponseEntity.ok("Élément ajouté avec succès");
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Collection non trouvée");
+        }
+    }
+
+    @DeleteMapping("/theme/{id}/{element}")
+    public ResponseEntity<String> supprimerElement(@PathVariable("id") int id, @PathVariable("element") String element) {
+        Optional<Collection> collectionOpt = collectionRepository.findById(id);
+
+        if (collectionOpt.isPresent()) {
+            Collection collection = collectionOpt.get();
+            collection.getSets().remove(element);
+            collectionRepository.save(collection);
+            return ResponseEntity.ok("Élément supprimé avec succès");
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Collection non trouvée");
         }
