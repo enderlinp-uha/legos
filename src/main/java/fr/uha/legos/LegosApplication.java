@@ -120,6 +120,58 @@ public class LegosApplication {
             collection3.setSets(sets3);
             data2.add(collection3);
 
+            Collection collection4 = new Collection();
+            collection4.setNom("City");
+            collection4.setNombre_scenes(20);
+            collection4.setNombre_pieces(500);
+            collection4.setNombre_minifigs(50);
+            collection4.setCollectionneur(collectionneur5);
+            collection4.setImage("https://fr.wikipedia.org/wiki/Lego#/media/Fichier:LEGO_logo.svg");
+            collection4.setDescription("La collection City est une collection de Lego qui reprend des scènes de la vie quotidienne.");
+            List<String> sets4 = new ArrayList<>();
+            sets4.add("(MOC2)");
+            sets4.add("(60444)");
+            sets4.add("(60437)");
+            sets4.add("(6003)");
+            sets4.add("(60391)");
+
+            collection4.setSets(sets4);
+            data2.add(collection4);
+
+            Collection collection5 = new Collection();
+            collection5.setNom("Attaque sur tatooine");
+            collection5.setNombre_scenes(1);
+            collection5.setNombre_pieces(4000);
+            collection5.setNombre_minifigs(300);
+            collection5.setCollectionneur(collectionneur4);
+            collection5.setImage("https://fr.wikipedia.org/wiki/Lego_Star_Wars#/media/Fichier:Millennium_Falcon_in_LEGO.jpg");
+            collection5.setDescription("Une reconstruction de la bataille de Tatooine. Notez les détails humoristiques cachés dans la scène.");
+            List<String> sets5 = new ArrayList<>();
+            sets5.add("(75355)");
+            sets5.add("(MOC3)");
+            sets5.add("(75382)");
+            sets5.add("(75389)");
+            sets5.add("(75379)");
+
+            collection5.setSets(sets5);
+            data2.add(collection5);
+
+            Collection collection6 = new Collection();
+            collection6.setNom("Jar Jar Binks taille réelle");
+            collection6.setNombre_scenes(1);
+            collection6.setNombre_pieces(40000);
+            collection6.setNombre_minifigs(0);
+            collection6.setCollectionneur(collectionneur4);
+            collection6.setImage("https://en.wikipedia.org/wiki/Jar_Jar_Binks#/media/File:Jjportrait.jpg");
+            collection6.setDescription("L'iconique personnage de Star Wars est ici reproduit à l'aide de Lego. Il mesure 2m de haut.");
+            List<String> sets6 = new ArrayList<>();
+            sets6.add("(6559771/7225)");
+            sets6.add("(6519762/21301)");
+            sets6.add("(6515558/79389)");
+
+            collection6.setSets(sets6);
+            data2.add(collection6);
+
             collectionRepository.saveAll(data2);
 
             System.out.println("\n\n---------- FIN ----------");
