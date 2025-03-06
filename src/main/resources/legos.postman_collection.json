@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "0972f055-b126-44a0-aeda-1526d8d3bdd2",
+		"name": "legos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41625157"
+	},
+	"item": [
+		{
+			"name": "collection",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/collection",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"collection"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "collectionneur",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
